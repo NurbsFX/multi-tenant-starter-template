@@ -24,9 +24,8 @@ type PricingCardProps = {
 export function PricingCard(props: PricingCardProps) {
   return (
     <Card
-      className={`w-full max-w-sm ${
-        props.isPopular ? "border-primary border-2 shadow-lg" : ""
-      }`}
+      className={`w-full max-w-sm ${props.isPopular ? "border-primary border-2 shadow-lg" : ""
+        }`}
     >
       <CardHeader>
         <CardTitle className="text-2xl font-bold">{props.title}</CardTitle>
@@ -35,13 +34,13 @@ export function PricingCard(props: PricingCardProps) {
       <CardContent>
         <div className="mb-4">
           <span className="text-4xl font-bold">{props.price}</span>
-          <span className="text-muted-foreground">/month</span>
+          <span className="text-muted-foreground">/mois</span>
         </div>
         <ul className="space-y-2">
           {props.features.map((feature, index) => (
             <li key={index} className="flex items-center">
-              <Check className="mr-2 h-4 w-4 text-primary" />
-              <span>{feature}</span>
+              <Check className="m-2 h-5 w-5 shrink-0" /> {/* Taille uniforme et centrée */}
+              <span className="ml-2">{feature}</span>
             </li>
           ))}
         </ul>

@@ -27,14 +27,14 @@ function SignInSignUpButtons() {
         href={app.urls.signIn}
         className={buttonVariants({ variant: "secondary" })}
       >
-        Sign In
+        Se connecter
       </Link>
 
       <Link
         href={app.urls.signUp}
         className={buttonVariants({ variant: "default" })}
       >
-        Sign Up
+        S'inscrire
       </Link>
     </>
   );
