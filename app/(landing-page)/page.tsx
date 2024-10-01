@@ -109,11 +109,11 @@ export default async function IndexPage() {
             price: "Gratuit",
             description: "Pour explorer la plateforme et commencer à s'entraîner.",
             features: [
-              "Accès à un nombre limité de sujets TOEFL",
-              "Feedbacks automatiques de base (sans correction détaillée)",
-              "Accès à une simulation d'examen limitée par mois",
-              "Rapport de progression simplifié",
-              "Accès uniquement aux sections Reading et Listening",
+              { text: "Accès à un nombre limité de sujets TOEFL" },
+              { text: "Feedbacks automatiques de base (sans correction détaillée)", comingSoon: true },
+              { text: "Accès à une simulation d'examen limitée par mois" },
+              { text: "Rapport de progression simplifié", comingSoon: true },
+              { text: "Accès uniquement aux sections Reading et Listening" },
             ],
             buttonText: "Commencer",
             buttonHref: stackServerApp.urls.signUp,
@@ -123,11 +123,11 @@ export default async function IndexPage() {
             price: "9,90 €",
             description: "Un accompagnement complet pour une progression continue.",
             features: [
-              "Accès illimité à tous les sujets TOEFL",
-              "Feedbacks intelligents et corrections détaillées pour chaque réponse",
-              "Simulations d'examen complètes (jusqu'à 3 par mois)",
-              "Rapport de progression détaillé avec analyse des performances",
-              "Accès aux 4 sections (Reading, Listening, Speaking, Writing)",
+              { text: "Accès illimité à tous les sujets TOEFL" },
+              { text: "Feedbacks intelligents et corrections détaillées pour chaque réponse", comingSoon: true },
+              { text: "Simulations d'examen complètes (jusqu'à 3 par mois)" },
+              { text: "Rapport de progression détaillé avec analyse des performances", comingSoon: true },
+              { text: "Accès aux 4 sections (Reading, Listening, Speaking, Writing)" },
             ],
             buttonText: "Passer au plan Essentiel",
             isPopular: true,
@@ -138,18 +138,19 @@ export default async function IndexPage() {
             price: "14,90 €",
             description: "Le plan ultime pour exceller et maîtriser le TOEFL.",
             features: [
-              "Accès illimité à tous les sujets TOEFL",
-              "Feedbacks intelligents, corrections approfondies et conseils personnalisés en temps réel.",
-              "Simulations d'examen illimitées",
-              "Rapport de progression avancé avec recommandations spécifiques pour améliorer les performances",
-              "Accès aux 4 sections (Reading, Listening, Speaking, Writing)",
-              "Plan de préparation personnalisé selon l'échéance de l'examen",
+              { text: "Accès illimité à tous les sujets TOEFL" },
+              { text: "Feedbacks intelligents, corrections approfondies et conseils personnalisés en temps réel", comingSoon: true },
+              { text: "Simulations d'examen illimitées" },
+              { text: "Rapport de progression avancé avec recommandations spécifiques pour améliorer les performances", comingSoon: true },
+              { text: "Accès aux 4 sections (Reading, Listening, Speaking, Writing)" },
+              { text: "Plan de préparation personnalisé selon l'échéance de l'examen", comingSoon: true },
             ],
             buttonText: "Passer en mode tryhard",
             buttonHref: stackServerApp.urls.signUp,
           },
         ]}
       />
+
 
     </>
   );

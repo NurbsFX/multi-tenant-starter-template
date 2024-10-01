@@ -11,15 +11,21 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
+type Feature = {
+  text: string;
+  comingSoon?: boolean;  // Ajout du champ facultatif pour indiquer si la fonctionnalité est "à venir"
+};
+
 type PricingCardProps = {
   title: string;
   price: string;
   description: string;
-  features: string[];
+  features: Feature[];  // Met à jour le type des features pour accepter un tableau d'objets Feature
   buttonText: string;
   buttonHref: string;
   isPopular?: boolean;
 };
+
 
 export function PricingCard(props: PricingCardProps) {
   return (
@@ -40,7 +46,14 @@ export function PricingCard(props: PricingCardProps) {
           {props.features.map((feature, index) => (
             <li key={index} className="flex items-center">
               <Check className="m-2 h-5 w-5 shrink-0" /> {/* Taille uniforme et centrée */}
-              <span className="ml-2">{feature}</span>
+              <span className="ml-2">
+                {feature.text}
+                {feature.comingSoon && (
+                  <span className="ml-2 text-xs text-gray-500 italic">
+                    (à venir)
+                  </span>
+                )}
+              </span>
             </li>
           ))}
         </ul>
@@ -58,6 +71,7 @@ export function PricingCard(props: PricingCardProps) {
     </Card>
   );
 }
+
 
 export function PricingGrid(props: {
   title: string;
